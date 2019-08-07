@@ -59,7 +59,7 @@ int EquihashR<N, K, R>::InitialiseState(eh_HashState &base_state)
     uint32_t le_K = htole32(K);
 
     unsigned char personalization[BLAKE2B_PERSONALBYTES] = {};
-    memcpy(personalization, "Beam-PoW", 8);
+    memcpy(personalization, "GrimmPOW", 8);
     memcpy(personalization + 8, &le_N, 4);
     memcpy(personalization + 12, &le_K, 4);
 
